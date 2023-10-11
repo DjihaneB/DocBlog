@@ -1,0 +1,13 @@
+# Fichiers spécifiques à l'environnement
+.env
+*.pyc
+__pycache__/
+
+# Fichiers de logs
+*.log
+
+# Répertoires de médias
+media/
+
+# Répertoire de dépendances virtuelles
+venv/
