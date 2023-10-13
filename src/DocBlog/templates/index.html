@@ -1,3 +1,4 @@
+<!-- https://docs.djangoproject.com/en/4.2/ref/templates/builtins/ -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,32 +7,9 @@
     <title>Ma Page Web</title>
 </head>
 <body>
-    <header>
-        <h1>Mon Titre Principal</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Section 1</h2>
-            <p>Ceci est le contenu de la première section.</p>
-        </section>
-        
-        <section>
-            <h2>Section 2</h2>
-            <p>Ceci est le contenu de la deuxième section.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Mon Site Web</p>
-    </footer>
+    <h1>Mon Titre Principal</h1>
+    <div>
+        <h2>Aujourd'hui nous somme le {{ date| date:" d F Y  H:i:s" }}</h2>
+    </div> 
 </body>
 </html>
