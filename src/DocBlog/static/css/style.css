@@ -1,4 +1,18 @@
 body {
     background-image: url("/static/images/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
     color: aliceblue;
 }
+
+#home {
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonnes */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh;
+}
+
+
