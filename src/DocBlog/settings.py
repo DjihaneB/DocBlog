@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-APPEND_SLASH = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -30,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# definition definition
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -61,8 +60,7 @@ TEMPLATES = [
 # Cette ligne configure l'emplacement où Django doit rechercher les fichiers de modèle (templates) de l'application.
 # Elle utilise os.path.join pour créer un chemin absolu à partir de BASE_DIR vers le répertoire "DocBlog/templates".
 # Vous pouvez personnaliser cet emplacement en fonction de l'organisation de vos fichiers de modèle.
-
-        'APP_DIRS': True, #Rechercher des fichiers de modèles (templates) dans les répertoires des applications du projet
+#Rechercher des fichiers de modèles (templates) dans les répertoires des applications du projet
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -125,3 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "DocBlog/static" ) ]
+
