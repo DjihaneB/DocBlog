@@ -7,5 +7,5 @@ from django.shortcuts import render
 
 def index (request):
      
-    return render(request, "index.html", context={"date" : datetime.today() })
+    return render(request, "index.html", context = {"date" : datetime.today() })
     
