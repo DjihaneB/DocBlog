@@ -16,6 +16,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+APPEND_SLASH = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -61,7 +62,7 @@ TEMPLATES = [
 # Elle utilise os.path.join pour créer un chemin absolu à partir de BASE_DIR vers le répertoire "DocBlog/templates".
 # Vous pouvez personnaliser cet emplacement en fonction de l'organisation de vos fichiers de modèle.
 
-        'APP_DIRS': True,#Rechercher des fichiers de modèles (templates) dans les répertoires des applications du projet
+        'APP_DIRS': True, #Rechercher des fichiers de modèles (templates) dans les répertoires des applications du projet
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
