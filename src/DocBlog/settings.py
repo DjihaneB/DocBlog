@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -54,7 +55,12 @@ ROOT_URLCONF = 'DocBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "DocBlog/templates")],
+        'DIRS': [os.path.join(BASE_DIR, "DocBlog/templates")],
+# Cette ligne configure l'emplacement où Django doit rechercher les fichiers de modèle (templates) de l'application.
+# Elle utilise os.path.join pour créer un chemin absolu à partir de BASE_DIR vers le répertoire "DocBlog/templates".
+# Vous pouvez personnaliser cet emplacement en fonction de l'organisation de vos fichiers de modèle.
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
